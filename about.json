@@ -1,0 +1,7 @@
+{
+  "name": "MAAS discourse theme",
+  "about_url": "https://github.com/canonical/maas-discourse-theme",
+  "head_tag": "common/head_tag.html",
+  "header": "common/header.html",
+  "body_tag": "common/body_tag.html"
+}

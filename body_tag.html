@@ -1,0 +1,17 @@
+<script src="https://maas.io/static/js/modules/global-nav/global-nav.js"></script>
+<script>
+  // Initialise global navigation
+  canonicalGlobalNav.createNav({
+    showLogins: false,
+    maxWidth: "90rem"
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      var logo = document.getElementById('site-logo');
+      if (logo) {
+        var logoLink = logo.parentNode;
+        logoLink.setAttribute('href', "https://maas.io");
+      }
+    }, 1);
+  });
+</script>

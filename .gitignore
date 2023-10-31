@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# IDE project files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Compiled files
+dist/
+build/
+
+# Cache
+.cache/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# dotenv environment variables file
+.env
