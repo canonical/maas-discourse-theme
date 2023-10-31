@@ -1,4 +1,5 @@
 {
-  "name": "MAAS discourse theme",
-  "about_url": "https://github.com/canonical/maas-discourse-theme"
+  "name": "MAAS Discourse Theme",
+  "about_url": "https://github.com/canonical/maas-discourse-theme",
+  "license_url": "https://github.com/canonical/maas-discourse-theme/blob/main/LICENSE"
 }
