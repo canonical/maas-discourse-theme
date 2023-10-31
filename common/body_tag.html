@@ -1,10 +1,7 @@
 <script src="https://maas.io/static/js/modules/global-nav/global-nav.js"></script>
 <script>
   // Initialise global navigation
-  canonicalGlobalNav.createNav({
-    showLogins: false,
-    maxWidth: "90rem"
-  });
+  canonicalGlobalNav.createNav({ breakpoint: 960 });
   document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       var logo = document.getElementById('site-logo');
@@ -14,4 +11,75 @@
       }
     }, 1);
   });
+
+  // global nav overlay fix
+  const DISTANCE_FROM_TOP = 59;
+  function toggleScrollClass(selector, scrollClassName) {
+    if (window.scrollY > DISTANCE_FROM_TOP) {
+      selector.classList.add(scrollClassName);
+    } else {
+      selector.classList.remove(scrollClassName);
+    }
+  };
+  document.addEventListener('scroll', function () {
+    const secondaryNav = document.querySelector('.p-navigation--secondary');
+    const listControls = document.querySelector('.list-controls');
+    const dHeader = document.querySelector('.d-header');
+
+    toggleScrollClass(secondaryNav, 'p-navigation--secondary__scrolled');
+    toggleScrollClass(listControls, 'list-controls__scrolled');
+    toggleScrollClass(dHeader, 'd-header__scrolled');
+  })
+
+  // navigation dropdown toggle
+  function toggleDropdown(toggle, open) {
+    var parentElement = toggle.parentNode;
+    var dropdown = document.getElementById(toggle.getAttribute('aria-controls'));
+    dropdown.setAttribute('aria-hidden', !open);
+
+    if (open) {
+      parentElement.classList.add('is-active');
+    } else {
+      parentElement.classList.remove('is-active');
+    }
+  }
+
+  function closeAllDropdowns(toggles) {
+    toggles.forEach(function (toggle) {
+      toggleDropdown(toggle, false);
+    });
+  }
+
+  function handleClickOutside(toggles, containerClass) {
+    document.addEventListener('click', function (event) {
+      var target = event.target;
+
+      if (target.closest) {
+        if (!target.closest(containerClass)) {
+          closeAllDropdowns(toggles);
+        }
+      }
+    });
+  }
+
+  function initNavDropdowns(containerClass) {
+    var toggles = [].slice.call(document.querySelectorAll(containerClass + ' [aria-controls]'));
+
+    handleClickOutside(toggles, containerClass);
+
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const wasOpen = toggle.parentElement.classList.contains('is-active');
+        closeAllDropdowns(toggles);
+        if (!wasOpen) {
+          toggleDropdown(toggle, true);
+        }
+      });
+    });
+  }
+
+  initNavDropdowns('.p-navigation__item--dropdown-toggle')
+
 </script>
