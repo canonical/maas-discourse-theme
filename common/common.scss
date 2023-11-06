@@ -2,7 +2,7 @@
   Ubuntu font
 ***************************************/
 html {
-  -webkit-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased;
 }
 
 body,
@@ -24,8 +24,6 @@ h2,
 h3 {
   font-weight: 100;
 }
-
-
 
 /***************************************
 Main navigation
@@ -55,7 +53,6 @@ Main navigation
 //     padding-left: 1rem;
 // }
 
-
 // @media (min-width: 620px) {
 //     .list-controls,
 //     .p-navigation__banner {
@@ -76,7 +73,6 @@ Main navigation
 //         margin-left: 0;
 //     }
 // }
-
 
 // .p-navigation__tagged-logo .p-navigation__link {
 //     padding-left: 1.5rem;
@@ -245,7 +241,7 @@ Main navigation
 
 .p-navigation__tagged-logo .p-navigation__link,
 .p-navigation__link {
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   transition-property: background-color, color, opacity;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   background-color: rgba(0, 0, 0, 0);
@@ -331,8 +327,8 @@ Main navigation
   order: 1;
 }
 
-li>ul>li:last-of-type,
-li>ol>li:last-of-type {
+li > ul > li:last-of-type,
+li > ol > li:last-of-type {
   padding-bottom: 0;
 }
 
@@ -341,7 +337,7 @@ li>ol>li:last-of-type {
 }
 
 .p-navigation__link {
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   transition-property: background-color, color, opacity;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   background-color: rgba(0, 0, 0, 0);
@@ -405,7 +401,8 @@ li>ol>li:last-of-type {
 }
 
 .p-navigation__dropdown {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15), 0 2px 2px -1px rgba(0, 0, 0, .15), 0 0 3px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15),
+    0 2px 2px -1px rgba(0, 0, 0, 0.15), 0 0 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.125rem;
 }
 
@@ -468,7 +465,7 @@ li>ol>li:last-of-type {
 }
 
 hr {
-  background: rgba(0, 0, 0, .15);
+  background: rgba(0, 0, 0, 0.15);
   border: 0;
   height: 1px;
   margin-top: 0;
@@ -498,7 +495,6 @@ hr {
 }
 
 @supports (display: grid) {
-
   .p-divider,
   .row {
     display: grid;
@@ -510,25 +506,25 @@ hr {
     max-width: 72rem;
   }
 
-  .p-stepped-list--detailed .p-stepped-list__item [class*=col-],
-  .row--25-25-25-25 [class*=col-],
-  .row--25-25-50 [class*=col-],
-  .row--25-75 [class*=col-],
-  .row--50-50 [class*=col-],
-  .row [class*=col-],
-  .l-docs-row [class*=col-],
-  .p-divider [class*=col-] {
+  .p-stepped-list--detailed .p-stepped-list__item [class*="col-"],
+  .row--25-25-25-25 [class*="col-"],
+  .row--25-25-50 [class*="col-"],
+  .row--25-75 [class*="col-"],
+  .row--50-50 [class*="col-"],
+  .row [class*="col-"],
+  .l-docs-row [class*="col-"],
+  .p-divider [class*="col-"] {
     grid-column-start: auto;
   }
 
-  .p-stepped-list--detailed .p-stepped-list__item>*,
-  .row--25-25-25-25>*,
-  .row--25-25-50>*,
-  .row--25-75>*,
-  .row--50-50>*,
-  .row>*,
-  .l-docs-row>*,
-  .p-divider>* {
+  .p-stepped-list--detailed .p-stepped-list__item > *,
+  .row--25-25-25-25 > *,
+  .row--25-25-50 > *,
+  .row--25-75 > *,
+  .row--50-50 > *,
+  .row > *,
+  .l-docs-row > *,
+  .p-divider > * {
     grid-column-end: span 4;
   }
 }
@@ -604,11 +600,16 @@ p.u-no-margin--bottom {
   max-width: unset !important;
 }
 
-.global-nav-dropdown .u-no-margin--bottom:not(hr):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(small):not([class*=p-heading]):not([class*=p-button--link]) {
+.global-nav-dropdown
+  .u-no-margin--bottom:not(hr):not(h1):not(h2):not(h3):not(h4):not(h5):not(
+    h6
+  ):not(p):not(small):not([class*="p-heading"]):not([class*="p-button--link"]) {
   margin-bottom: 0 !important;
 }
 
-.u-no-margin--bottom:not(hr):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(p):not(small):not([class*=p-heading]):not([class*=p-button--link]) {
+.u-no-margin--bottom:not(hr):not(h1):not(h2):not(h3):not(h4):not(h5):not(
+    h6
+  ):not(p):not(small):not([class*="p-heading"]):not([class*="p-button--link"]) {
   margin-bottom: 0 !important;
 }
 
@@ -685,12 +686,12 @@ ul {
 }
 
 .global-nav-dropdown .p-divider {
-  background-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, 0.1);
   margin-bottom: 0.5rem;
 }
 
 .global-nav-dropdown .global-nav__row.is-bordered:after {
-  background-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, 0.1);
   content: "";
   display: block;
   height: 1px;
@@ -854,7 +855,9 @@ h5 {
     padding-left: calc(1.5rem + 1.5rem);
   }
 
-  .global-nav .global-nav__dropdown-toggle .global-nav__header-link-anchor:after {
+  .global-nav
+    .global-nav__dropdown-toggle
+    .global-nav__header-link-anchor:after {
     right: calc(0.5rem + 1px);
   }
 
@@ -879,7 +882,6 @@ h5 {
   .col-medium-2 {
     width: 100%;
   }
-
 
   .col-medium-4 {
     width: 100%;
@@ -909,14 +911,13 @@ h5 {
   }
 
   @supports (display: grid) {
-
     .p-divider,
     .row {
       grid-gap: 0 2rem;
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 
-    .row>* {
+    .row > * {
       grid-column-end: span 6;
     }
 
@@ -1037,7 +1038,6 @@ h5 {
   }
 
   @supports (display: grid) {
-
     .p-divider,
     .row {
       grid-gap: 0 2rem;
@@ -1056,7 +1056,7 @@ h5 {
       grid-column-end: span 2;
     }
 
-    .row>* {
+    .row > * {
       grid-column-end: span 12;
     }
   }
@@ -1075,7 +1075,7 @@ Secondary navigation
 .p-navigation--secondary {
   position: absolute;
   //   top: 88px;
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   margin-top: 0;
   width: 100%;
@@ -1087,8 +1087,6 @@ Secondary navigation
     box-shadow: 0 1px 5px 1px rgba(51, 51, 51, 0.2);
   }
 }
-
-
 
 .docked .p-navigation--secondary {
   box-shadow: 0 1px 5px 1px rgba(51, 51, 51, 0.2);
@@ -1136,7 +1134,8 @@ body:not(.docked) .p-navigation--secondary__banner:after {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -1148,7 +1147,6 @@ body:not(.docked) .p-navigation--secondary__banner:after {
 #navigation-bar {
   margin-right: 10px;
 }
-
 
 /***************************************
 Global navigation
@@ -1210,9 +1208,7 @@ Discourse overrides
   top: 0;
 }
 
-
-
-.d-header>.wrap {
+.d-header > .wrap {
   width: 100% !important;
   max-width: 1152px !important;
 }
@@ -1277,14 +1273,13 @@ Discourse overrides
   width: 85%;
 }
 
-
 .wrap {
   max-width: 1152px;
   position: relative;
 }
 
 @media screen and (max-width: 875px) {
-  .d-header>.wrap {
+  .d-header > .wrap {
     padding: 0;
   }
 
