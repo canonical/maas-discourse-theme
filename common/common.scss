@@ -1309,13 +1309,6 @@ button#create-topic .d-icon-plus {
   }
 }
 
-
-@media screen and (min-width: 900px) {
-  .docked button#create-topic {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 1050px) {
   .list-controls {
     margin-bottom: 0;
