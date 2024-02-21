@@ -1425,3 +1425,19 @@ a.badge-notification {
     display: block;
   }
 }
+
+/*
+  Workaround for the main navigation not clickable
+  when scrolled to the top of the page
+  as it's obscured by the discourse wrapper
+*/
+#main-outlet-wrapper,
+.d-header {
+  pointer-events: none;
+}
+.container,
+.search-container,
+.list-controls,
+.d-header .panel {
+  pointer-events: all;
+}
