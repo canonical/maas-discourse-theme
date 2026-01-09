@@ -1258,6 +1258,14 @@ Discourse overrides
   z-index: 10002;
 }
 
+.navigation-controls {
+  flex-wrap: nowrap;
+
+  .row.dismiss-container-top {
+    display: block;
+  }
+}
+
 // **** For secondary nav ******************
 #main-outlet {
   padding-top: 8rem;
@@ -1344,7 +1352,6 @@ button#create-topic .d-icon-plus {
     position: absolute;
     top: 13px;
     z-index: 1999;
-    left: 154px;
     width: max-content;
   }
 
@@ -1359,12 +1366,6 @@ button#create-topic .d-icon-plus {
 
   .docked .list-controls.list-controls__scrolled {
     top: 13px;
-  }
-}
-
-@media screen and (max-width: 1432px) {
-  .list-controls {
-    left: 153px;
   }
 }
 
