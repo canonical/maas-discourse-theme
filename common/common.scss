@@ -1446,7 +1446,7 @@ a.badge-notification {
   discourse (early 2026)
 */
 
---header-offset: 112px // the height of the Canonical header, plus the discourse header
+--header-offset: 112px; // the height of the Canonical header, plus the discourse header
 
 .user-menu .quick-access-panel .user-menu-button-all-notifications {
   flex-flow: column;
